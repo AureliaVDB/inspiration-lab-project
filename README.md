@@ -1,1 +1,0 @@
-# inspiration-lab-project
