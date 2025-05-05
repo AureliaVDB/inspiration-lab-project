@@ -6,3 +6,4 @@ namespace KeepTrackApp.Models
         public string Password { get; set; }
     }
 }
+
