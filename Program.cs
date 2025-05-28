@@ -9,13 +9,13 @@ namespace KeepTrackApp
 {
     class Program
     {
-        static List<User> registeredUsers = new();
-        static List<Admin> admins = new()
+        public static List<User> registeredUsers = new();
+        public static List<Admin> admins = new()
         {
             new Admin { AdminId = "Raja", Password = "Admin" },
             new Admin { AdminId = "Aurelia", Password = "Admin" }
         };
-        static List<Supplement> supplements = new()
+        public static List<Supplement> supplements = new()
         {
             new Supplement
             {
@@ -38,7 +38,7 @@ namespace KeepTrackApp
                 Risks = "Might cause fishy aftertaste or mild stomach upset."
             }
         };
-        static List<Recipe> recipes = new()
+        public static List<Recipe> recipes = new()
         {
             new Recipe
             {
@@ -68,14 +68,30 @@ namespace KeepTrackApp
                 Fat = 20,
                 AdminId = "Aurelia"
             }
-            // ➕ Add more as needed
+            // Add more as needed
         };
-        static Dictionary<string, Progress> userProgress = new();
-        static Dictionary<string, List<MealLog>> userMeals = new();
+
+        public static Dictionary<string, Progress> userProgress = new();
+        public static Dictionary<string, List<MealLog>> userMeals = new();
 
 
         static void Main(string[] args)
         {
+            string connectionString = "server=localhost;port=3307;user=root;password=Svana13*;database=keeptrack;";
+            try
+            {
+                using var conn = new MySqlConnection(connectionString);
+                conn.Open();
+                Console.WriteLine("Connection successful!");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Connection failed: {ex.Message}");
+            }
+            
+            
+
+
             Console.WriteLine(" KEEP TRACK \n");
 
             Console.Write(" Username : ");
