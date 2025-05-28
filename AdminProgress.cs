@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using KeepTrackApp.Models;
+using KeepTrackApp.Utils;
+
 
 namespace KeepTrackApp
 {
@@ -25,15 +27,15 @@ namespace KeepTrackApp
                 string userId = Console.ReadLine();
                 if (userId == "0") return;
 
-                var user = RegisteredUsers.Find(u => u.UserId == userId);
-                if (user == null)
+                var selected_user = RegisteredUsers.Find(u => u.UserId == userId);
+                if (selected_user == null)
                 {
                     Console.WriteLine("❌ User not found. Press Enter to try again.");
                     Console.ReadLine();
                     continue;
                 }
 
-                ShowProgressForUser(user);
+                ShowProgressForUser(selected_user);
             }
         }
 

@@ -1,6 +1,6 @@
 namespace KeepTrackApp.Models
 {
-    public enum RecipeCategory { Breakfast, Lunch, Dinner, Snack }
+    public enum RecipeCategory { Breakfast, Lunch, Dinner, Snack, Meat, Fish }
 
     public class Recipe
     {
