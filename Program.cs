@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using KeepTrackApp.Models;
 using KeepTrackApp.Utils;
+using MySql.Data.MySqlClient;
+
 
 namespace KeepTrackApp
 {
@@ -93,9 +95,12 @@ namespace KeepTrackApp
             var admin = admins.Find(a => a.AdminId == username && a.Password == password);
             if (admin != null)
             {
-                Console.WriteLine($" Admin login {admin.AdminId}!");
+                Console.WriteLine($"✅ Admin login successful. Welcome, {admin.AdminId}!");
+                AdminDashboard.RegisteredUsers = registeredUsers;
+                AdminDashboard.LoadAdminDashboard();
                 return;
             }
+
 
             // Check User Login
             var user = registeredUsers.Find(u => u.Username == username && u.Password == password);
