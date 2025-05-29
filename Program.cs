@@ -78,20 +78,9 @@ namespace KeepTrackApp
         static void Main(string[] args)
         {
             string connectionString = "server=localhost;port=3307;user=root;password=Svana13*;database=keeptrack;";
-            try
-            {
-                using var conn = new MySqlConnection(connectionString);
-                conn.Open();
-                Console.WriteLine("Connection successful!");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Connection failed: {ex.Message}");
-            }
+           
             
-            
-
-
+ 
             Console.WriteLine(" KEEP TRACK \n");
 
             Console.Write(" Username : ");
@@ -119,13 +108,42 @@ namespace KeepTrackApp
 
 
             // Check User Login
-            var user = registeredUsers.Find(u => u.Username == username && u.Password == password);
+            User user = null;
+            string connectionString = "server=localhost;port=3306;user=root;password=Svana13*;database=keeptrack;";
+
+            using (var conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+
+                string query = "SELECT * FROM User WHERE Username = @Username AND Password = @Password LIMIT 1";
+                using var cmd = new MySqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@Username", username);
+                cmd.Parameters.AddWithValue("@Password", password);
+
+                using var reader = cmd.ExecuteReader();
+                if (reader.Read())
+                {
+                    user = new User
+                    {
+                        UserId = reader.GetString("UserId"),
+                        Username = reader.GetString("Username"),
+                        Email = reader.GetString("Email"),
+                        Password = reader.GetString("Password"),
+                        CreatedAt = reader.GetDateTime("CreatedAt"),
+                        DateOfBirth = reader.GetDateTime("DateOfBirth"),
+                        Age = reader.GetInt32("Age"),
+                        Gender = reader.GetString("Gender") == "Male" ? Gender.Male : Gender.Female
+                    };
+                }
+            }
+
             if (user != null)
             {
                 Console.WriteLine($" User login {user.Username}!");
-                ShowUserDashboard(user); // 👈 This shows the dashboard
+                ShowUserDashboard(user);
                 return;
             }
+
 
             Console.WriteLine(" try again");
         }
@@ -210,11 +228,52 @@ namespace KeepTrackApp
             };
 
             registeredUsers.Add(user);
+            // add to database
+            string connectionString = "server=localhost;port=3306;user=root;password=Svana13*;database=keeptrack;";
+
+            using var conn = new MySqlConnection(connectionString);
+            conn.Open();
+
+            string insertQuery = @"INSERT INTO User (UserId, Username, Email, Password, CreatedAt, DateOfBirth, Age, Gender)
+                       VALUES (@UserId, @Username, @Email, @Password, @CreatedAt, @DateOfBirth, @Age, @Gender);";
+
+            using var cmd = new MySqlCommand(insertQuery, conn);
+            cmd.Parameters.AddWithValue("@UserId", user.UserId);
+            cmd.Parameters.AddWithValue("@Username", user.Username);
+            cmd.Parameters.AddWithValue("@Email", user.Email);
+            cmd.Parameters.AddWithValue("@Password", user.Password);
+            cmd.Parameters.AddWithValue("@CreatedAt", user.CreatedAt);
+            cmd.Parameters.AddWithValue("@DateOfBirth", user.DateOfBirth);
+            cmd.Parameters.AddWithValue("@Age", user.Age);
+            cmd.Parameters.AddWithValue("@Gender", user.Gender.ToString());
+
+            cmd.ExecuteNonQuery();
             Console.WriteLine($"\n Registration successful! Welcome, {user.Username}!");
         }
 
         static void ShowUserDashboard(User user)
         {
+            //take data from database 
+            string connectionString = "server=localhost;port=3306;user=root;password=Svana13*;database=keeptrack;";
+            using (var conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = "SELECT * FROM User WHERE UserId = @UserId LIMIT 1";
+                using var cmd = new MySqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@UserId", user.UserId);
+                using var reader = cmd.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    user.Username = reader.GetString("Username");
+                    user.Email = reader.GetString("Email");
+                    user.Age = reader.GetInt32("Age");
+                    user.DateOfBirth = reader.GetDateTime("DateOfBirth");
+                    user.CreatedAt = reader.GetDateTime("CreatedAt");
+                    user.Gender = reader.GetString("Gender") == "Male" ? Gender.Male : Gender.Female;
+                }
+            }
+
             Console.Clear();
             Console.WriteLine("========== USER DASHBOARD ==========\n");
 
@@ -231,6 +290,13 @@ namespace KeepTrackApp
             if (!string.IsNullOrWhiteSpace(newName))
             {
                 user.Username = newName;
+                using var conn = new MySqlConnection(connectionString);
+                conn.Open();
+                string updateQuery = "UPDATE User SET Username = @Username WHERE UserId = @UserId";
+                using var updateCmd = new MySqlCommand(updateQuery, conn);
+                updateCmd.Parameters.AddWithValue("@Username", user.Username);
+                updateCmd.Parameters.AddWithValue("@UserId", user.UserId);
+                updateCmd.ExecuteNonQuery();
                 Console.WriteLine($" Name updated to {user.Username}");
             }
 
@@ -322,6 +388,20 @@ namespace KeepTrackApp
             }
 
             user.Password = newPassword;
+            string connectionString = "server=localhost;port=3306;user=root;password=Svana13*;database=keeptrack;";
+            using var conn = new MySqlConnection(connectionString);
+            conn.Open();
+
+            string updateQuery = @"UPDATE User 
+                       SET Password = @Password 
+                       WHERE UserId = @UserId";
+
+            using var cmd = new MySqlCommand(updateQuery, conn);
+            cmd.Parameters.AddWithValue("@Password", newPassword);
+            cmd.Parameters.AddWithValue("@UserId", user.UserId);
+
+            cmd.ExecuteNonQuery();
+
             Console.WriteLine("✅ Password updated successfully.");
         }
 
@@ -354,34 +434,93 @@ namespace KeepTrackApp
             }
 
             registeredUsers.Remove(user);
+            // Delete from MySQL
+            string connectionString = "server=localhost;port=3306;user=root;password=Svana13*;database=keeptrack;";
+            using var conn = new MySqlConnection(connectionString);
+            conn.Open();
+
+            // Delete meals
+            var delMeals = new MySqlCommand("DELETE FROM MealLog WHERE UserId = @UserId", conn);
+            delMeals.Parameters.AddWithValue("@UserId", user.UserId);
+            delMeals.ExecuteNonQuery();
+
+            // Delete progress
+            var delProgress = new MySqlCommand("DELETE FROM Progress WHERE UserId = @UserId", conn);
+            delProgress.Parameters.AddWithValue("@UserId", user.UserId);
+            delProgress.ExecuteNonQuery();
+
+            // Delete user
+            var delUser = new MySqlCommand("DELETE FROM User WHERE UserId = @UserId", conn);
+            delUser.Parameters.AddWithValue("@UserId", user.UserId);
+            delUser.ExecuteNonQuery();
+
+            
             Console.WriteLine("\n✅ Your account has been permanently deleted.");
             Console.WriteLine("You have been logged out.");
         }
         static void ShowSupplements(User user)
         {
+
+            //foreach (var supplement in supplements)
+            //{
+            //    Console.WriteLine($"▶ {supplement.Name.ToUpper()}");
+            //    Console.WriteLine($"Dosage       : {supplement.Dosage}");
+            //    Console.WriteLine($"Instructions : {supplement.Instructions}");
+            //    Console.WriteLine($"Benefits     : {supplement.Benefits}");
+            //    Console.WriteLine($"Risks        : {supplement.Risks}");
+            //    Console.WriteLine(new string('-', 40));
+            //}
+
             Console.Clear();
             Console.WriteLine("===== SUPPLEMENTS TAB =====\n");
             Console.WriteLine("⚠️ CAUTION NOTICE: Always consult a healthcare provider before taking any supplement.\n");
 
-            foreach (var supplement in supplements)
+            string connectionString = "server=localhost;port=3306;user=root;password=Svana13*;database=keeptrack;";
+            using var conn = new MySqlConnection(connectionString);
+            conn.Open();
+
+            string query = "SELECT * FROM Supplement";
+            using var cmd = new MySqlCommand(query, conn);
+            using var reader = cmd.ExecuteReader();
+
+            while (reader.Read())
             {
-                Console.WriteLine($"▶ {supplement.Name.ToUpper()}");
-                Console.WriteLine($"Dosage       : {supplement.Dosage}");
-                Console.WriteLine($"Instructions : {supplement.Instructions}");
-                Console.WriteLine($"Benefits     : {supplement.Benefits}");
-                Console.WriteLine($"Risks        : {supplement.Risks}");
+                Console.WriteLine($"▶ {reader["Name"].ToString().ToUpper()}");
+                Console.WriteLine($"Dosage       : {reader["Dosage"]}");
+                Console.WriteLine($"Instructions : {reader["Instructions"]}");
+                Console.WriteLine($"Benefits     : {reader["Benefits"]}");
+                Console.WriteLine($"Risks        : {reader["Risks"]}");
                 Console.WriteLine(new string('-', 40));
             }
 
             Console.WriteLine("\nPress Enter to return to dashboard...");
             Console.ReadLine();
+
         }
         static void ShowRecipes(User user)
         {
-            Console.Clear();
-            Console.WriteLine("======= RECIPES =======\n");
+          
+            //foreach (RecipeCategory category in Enum.GetValues(typeof(RecipeCategory)))
+            //{
+            //    Console.WriteLine($"📂 {category.ToString().ToUpper()}");
+            //    foreach (var recipe in recipes.FindAll(r => r.Category == category))
+            //    {
+            //        Console.WriteLine($"\n🍽 {recipe.Title.ToUpper()} ({recipe.Protein}g / {recipe.Carbs}g / {recipe.Fat}g / {recipe.Calories} kcal)");
+            //        Console.WriteLine($"Ingredients : {recipe.Ingredients}");
+            //        Console.WriteLine($"Instructions: {recipe.Instructions}");
+            //        Console.WriteLine($"Image       : {recipe.Image}");
+            //        Console.WriteLine(new string('-', 40));
+            //    }
+            //    Console.WriteLine(); // spacing between categories
+            //}
+            string connectionString = "server=localhost;port=3306;user=root;password=Svana13*;database=keeptrack;";
+            using var conn = new MySqlConnection(connectionString);
+            conn.Open();
 
-            // Display category nav info
+            Console.Clear();
+            Console.WriteLine("======= RECIPES (FROM DATABASE) =======\n");
+
+            // Display category navigation
             Console.WriteLine("Available Categories:");
             foreach (var cat in Enum.GetValues(typeof(RecipeCategory)))
                 Console.WriteLine($"- {cat}");
@@ -390,16 +529,22 @@ namespace KeepTrackApp
 
             foreach (RecipeCategory category in Enum.GetValues(typeof(RecipeCategory)))
             {
-                Console.WriteLine($"📂 {category.ToString().ToUpper()}");
-                foreach (var recipe in recipes.FindAll(r => r.Category == category))
+                Console.WriteLine($"\n📂 {category.ToString().ToUpper()}");
+
+                string query = "SELECT * FROM Recipe WHERE Category = @Category";
+                using var cmd = new MySqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@Category", category.ToString());
+
+                using var reader = cmd.ExecuteReader();
+                while (reader.Read())
                 {
-                    Console.WriteLine($"\n🍽 {recipe.Title.ToUpper()} ({recipe.Protein}g / {recipe.Carbs}g / {recipe.Fat}g / {recipe.Calories} kcal)");
-                    Console.WriteLine($"Ingredients : {recipe.Ingredients}");
-                    Console.WriteLine($"Instructions: {recipe.Instructions}");
-                    Console.WriteLine($"Image       : {recipe.Image}");
+                    Console.WriteLine($"\n🍽 {reader["Title"].ToString().ToUpper()} ({reader["Protein"]}P / {reader["Carbs"]}C / {reader["Fat"]}F / {reader["Calories"]} kcal)");
+                    Console.WriteLine($"Ingredients : {reader["Ingredients"]}");
+                    Console.WriteLine($"Instructions: {reader["Instructions"]}");
+                    Console.WriteLine($"Image       : {reader["Image"]}");
                     Console.WriteLine(new string('-', 40));
                 }
-                Console.WriteLine(); // spacing between categories
+                reader.Close(); // Important to close before next query
             }
 
             Console.WriteLine("\n(Press Enter to return to dashboard)");
@@ -418,6 +563,20 @@ namespace KeepTrackApp
             if (!userProgress.ContainsKey(user.UserId))
                 userProgress[user.UserId] = new Progress { UserId = user.UserId };
             userProgress[user.UserId].AddWeight(DateTime.Today, weightKg);
+            // add to database
+            using var weightConn = new MySqlConnection(connectionString);
+            weightConn.Open();
+
+            string insertWeight = @"INSERT INTO Progress (UserId, Date, Weight)
+                        VALUES (@UserId, @Date, @Weight);";
+
+            using var weightCmd = new MySqlCommand(insertWeight, weightConn);
+            weightCmd.Parameters.AddWithValue("@UserId", user.UserId);
+            weightCmd.Parameters.AddWithValue("@Date", DateTime.Today);
+            weightCmd.Parameters.AddWithValue("@Weight", weightKg);
+
+            weightCmd.ExecuteNonQuery();
+
 
             // STEP 2: Generate Target Macros
             float proteinTarget = weightKg * 2f;
@@ -466,6 +625,27 @@ namespace KeepTrackApp
 
                 userMeals[user.UserId].Add(meal);
                 Console.WriteLine("✅ Meal added!");
+                //add to database
+                string connectionString = "server=localhost;port=3306;user=root;password=Svana13*;database=keeptrack;";
+
+                using var conn = new MySqlConnection(connectionString);
+                conn.Open();
+
+                string insertMeal = @"INSERT INTO MealLog (UserId, Date, Category, Description, Calories, Protein, Carbs, Fat)
+                      VALUES (@UserId, @Date, @Category, @Description, @Calories, @Protein, @Carbs, @Fat);";
+
+                using var cmd = new MySqlCommand(insertMeal, conn);
+                cmd.Parameters.AddWithValue("@UserId", meal.UserId);
+                cmd.Parameters.AddWithValue("@Date", meal.Date);
+                cmd.Parameters.AddWithValue("@Category", meal.Category.ToString());
+                cmd.Parameters.AddWithValue("@Description", meal.Description);
+                cmd.Parameters.AddWithValue("@Calories", meal.Calories);
+                cmd.Parameters.AddWithValue("@Protein", meal.Protein);
+                cmd.Parameters.AddWithValue("@Carbs", meal.Carbs);
+                cmd.Parameters.AddWithValue("@Fat", meal.Fat);
+
+                cmd.ExecuteNonQuery();
+
             }
 
             // STEP 4: Show daily totals and compare to targets
@@ -495,14 +675,68 @@ namespace KeepTrackApp
             float weeklyP = 0, weeklyF = 0, weeklyC = 0, weeklyKcal = 0;
             int daysWithMeals = 0;
 
+            //for (int i = 0; i < 7; i++)
+            //{
+            //    DateTime date = startOfWeek.AddDays(i);
+            //    var mealsForDay = userMeals[user.UserId].FindAll(m => m.Date.Date == date);
+
+            //    if (mealsForDay.Count == 0) continue;
+
+            //    Console.WriteLine($"\n📌 Day {i + 1} - {date:dddd}");
+            //    float dayP = 0, dayF = 0, dayC = 0, dayKcal = 0;
+
+            //    foreach (var m in mealsForDay)
+            //    {
+            //        Console.WriteLine($" - {m.Description} | {m.Protein}P {m.Fat}F {m.Carbs}C = {m.Calories} kcal");
+            //        dayP += m.Protein;
+            //        dayF += m.Fat;
+            //        dayC += m.Carbs;
+            //        dayKcal += m.Calories;
+            //    }
+
+            //    Console.WriteLine($"   ➕ Total: {dayP}P / {dayF}F / {dayC}C / {dayKcal} kcal");
+
+            //    weeklyP += dayP;
+            //    weeklyF += dayF;
+            //    weeklyC += dayC;
+            //    weeklyKcal += dayKcal;
+            //    daysWithMeals++;
+            //}
+            string connectionString = "server=localhost;port=3306;user=root;password=Svana13*;database=keeptrack;";
+            using var conn = new MySqlConnection(connectionString);
+            conn.Open();
+
             for (int i = 0; i < 7; i++)
             {
                 DateTime date = startOfWeek.AddDays(i);
-                var mealsForDay = userMeals[user.UserId].FindAll(m => m.Date.Date == date);
+
+                string query = @"SELECT * FROM MealLog 
+                     WHERE UserId = @UserId AND Date = @Date";
+                using var cmd = new MySqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@UserId", user.UserId);
+                cmd.Parameters.AddWithValue("@Date", date.Date);
+
+                using var reader = cmd.ExecuteReader();
+
+                List<MealLog> mealsForDay = new();
+                while (reader.Read())
+                {
+                    mealsForDay.Add(new MealLog
+                    {
+                        Description = reader["Description"].ToString(),
+                        Protein = Convert.ToSingle(reader["Protein"]),
+                        Carbs = Convert.ToSingle(reader["Carbs"]),
+                        Fat = Convert.ToSingle(reader["Fat"]),
+                        Calories = Convert.ToSingle(reader["Calories"])
+                    });
+                }
+
+                reader.Close();
 
                 if (mealsForDay.Count == 0) continue;
 
                 Console.WriteLine($"\n📌 Day {i + 1} - {date:dddd}");
+
                 float dayP = 0, dayF = 0, dayC = 0, dayKcal = 0;
 
                 foreach (var m in mealsForDay)
@@ -522,6 +756,7 @@ namespace KeepTrackApp
                 weeklyKcal += dayKcal;
                 daysWithMeals++;
             }
+
 
             // Show recap
             if (daysWithMeals > 0)

@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using KeepTrackApp.Models;
+using MySql.Data.MySqlClient;
+
 
 namespace KeepTrackApp
 {
@@ -115,6 +117,29 @@ namespace KeepTrackApp
             recipe.Fat = f;
 
             Recipes.Add(recipe);
+            //add to databse
+            string connectionString = "server=localhost;port=3306;user=root;password=Svana13*;database=keeptrack;";
+            using var conn = new MySqlConnection(connectionString);
+            conn.Open();
+
+            string insertRecipe = @"INSERT INTO Recipe 
+                (Title, Category, Ingredients, Instructions, Image, Calories, Protein, Carbs, Fat, AdminId)
+                VALUES
+                (@Title, @Category, @Ingredients, @Instructions, @Image, @Calories, @Protein, @Carbs, @Fat, @AdminId);";
+
+            using var cmd = new MySqlCommand(insertRecipe, conn);
+            cmd.Parameters.AddWithValue("@Title", recipe.Title);
+            cmd.Parameters.AddWithValue("@Category", recipe.Category.ToString());
+            cmd.Parameters.AddWithValue("@Ingredients", recipe.Ingredients);
+            cmd.Parameters.AddWithValue("@Instructions", recipe.Instructions);
+            cmd.Parameters.AddWithValue("@Image", recipe.Image);
+            cmd.Parameters.AddWithValue("@Calories", recipe.Calories);
+            cmd.Parameters.AddWithValue("@Protein", recipe.Protein);
+            cmd.Parameters.AddWithValue("@Carbs", recipe.Carbs);
+            cmd.Parameters.AddWithValue("@Fat", recipe.Fat);
+            cmd.Parameters.AddWithValue("@AdminId", recipe.AdminId);
+
+            cmd.ExecuteNonQuery();
             Console.WriteLine("\n✅ Recipe added. Press Enter to return...");
             Console.ReadLine();
         }

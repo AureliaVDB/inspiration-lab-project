@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using KeepTrackApp.Models;
+using MySql.Data.MySqlClient;
+
 
 namespace KeepTrackApp
 {
@@ -100,6 +102,26 @@ namespace KeepTrackApp
             supplement.Risks = Console.ReadLine();
 
             Supplements.Add(supplement);
+            //add to database
+            string connectionString = "server=localhost;port=3306;user=root;password=Svana13*;database=keeptrack;";
+            using var conn = new MySqlConnection(connectionString);
+            conn.Open();
+
+            string insertSupplement = @"INSERT INTO Supplement 
+                (AdminId, Name, Dosage, Instructions, Benefits, Risks)
+                VALUES 
+                (@AdminId, @Name, @Dosage, @Instructions, @Benefits, @Risks);";
+
+            using var cmd = new MySqlCommand(insertSupplement, conn);
+            cmd.Parameters.AddWithValue("@AdminId", supplement.AdminId);
+            cmd.Parameters.AddWithValue("@Name", supplement.Name);
+            cmd.Parameters.AddWithValue("@Dosage", supplement.Dosage);
+            cmd.Parameters.AddWithValue("@Instructions", supplement.Instructions);
+            cmd.Parameters.AddWithValue("@Benefits", supplement.Benefits);
+            cmd.Parameters.AddWithValue("@Risks", supplement.Risks);
+
+            cmd.ExecuteNonQuery();
+
             Console.WriteLine("\n✅ Supplement added. Press Enter to return...");
             Console.ReadLine();
         }
