@@ -1,0 +1,46 @@
+﻿<Window x:Class="KeepTrackAppUI.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Login - KeepTrack" Height="450" Width="500" ResizeMode="NoResize"
+        Background="White" WindowStartupLocation="CenterScreen">
+    <DockPanel>
+
+        <!-- GREEN HEADER -->
+        <Border Background="#9BFF66" DockPanel.Dock="Top" Padding="10">
+            <TextBlock Text="KEEP TRACK" FontSize="24" FontWeight="Bold"
+                       VerticalAlignment="Center" HorizontalAlignment="Left"/>
+        </Border>
+
+        <!-- LOGIN CONTENT -->
+        <Grid Margin="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="Welcome to KeepTrack" FontSize="22" FontWeight="Bold"
+               HorizontalAlignment="Center" Margin="0,0,0,20"/>
+
+            <StackPanel Grid.Row="1" Orientation="Vertical">
+                <Label Content="Email or User ID:"/>
+                <TextBox x:Name="UsernameBox" Height="25"/>
+            </StackPanel>
+
+            <StackPanel Grid.Row="2" Orientation="Vertical">
+                <Label Content="Password:"/>
+                <PasswordBox x:Name="PasswordBox" Height="25"/>
+            </StackPanel>
+
+            <Button Grid.Row="3" Content="Login" Height="30" Width="100"
+            Margin="0,20,0,0" HorizontalAlignment="Center" Click="Login_Click"/>
+
+            <TextBlock Grid.Row="4" Text="Don’t have an account? Register"
+               Foreground="Blue" HorizontalAlignment="Center"
+               Cursor="Hand" MouseDown="RegisterText_MouseDown"/>
+        </Grid>
+
+    </DockPanel>
+</Window>
