@@ -25,11 +25,7 @@
                 <ComboBoxItem Content="Female"/>
             </ComboBox>
 
-            <TextBlock Text="Email:"/>
-            <StackPanel Orientation="Horizontal">
-                <TextBox x:Name="EmailBox" Width="300"/>
-                <Button Content="Send Email" Margin="10,0" Click="SendEmail_Click"/>
-            </StackPanel>
+
 
             <TextBlock Text="Password:" Margin="0,10,0,0"/>
             <PasswordBox x:Name="PasswordBox"/>
@@ -40,8 +36,7 @@
             <TextBlock Text="Confirm Password:"/>
             <PasswordBox x:Name="ConfirmPasswordBox" Margin="0,0,0,10"/>
 
-            <TextBlock Text="Confirmation Code (from email):"/>
-            <TextBox x:Name="CodeBox" Margin="0,0,0,20"/>
+
 
             <Button Content="Register" Height="35" Click="Register_Click"/>
             <TextBlock x:Name="ResultText" Foreground="Red" FontWeight="Bold" Margin="10"/>

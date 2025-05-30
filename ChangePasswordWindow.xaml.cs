@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using MySql.Data.MySqlClient;
-using KeepTrackApp.Utils; 
+using KeepTrackApp.Utils;
 
 namespace KeepTrackAppUI
 {
@@ -29,27 +29,27 @@ namespace KeepTrackAppUI
             currentUserEmail = userEmail;
         }
 
-        private void SendCode_Click(object sender, RoutedEventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(currentUserEmail) || !UserHelper.ValidateEmail(currentUserEmail))
-            {
-                ResultText.Text = "❌ Invalid email.";
-                return;
-            }
+        //private void SendCode_Click(object sender, RoutedEventArgs e)
+        //{
+        //    if (string.IsNullOrWhiteSpace(currentUserEmail) || !UserHelper.ValidateEmail(currentUserEmail))
+        //    {
+        //        ResultText.Text = "❌ Invalid email.";
+        //        return;
+        //    }
 
-            verificationCode = UserHelper.GenerateVerificationCode();
-            UserHelper.SendVerificationEmail(currentUserEmail, verificationCode, currentUserId);
-            ResultText.Text = "✅ Verification code sent to email.";
-        }
+        //    verificationCode = UserHelper.GenerateVerificationCode();
+        //    UserHelper.SendVerificationEmail(currentUserEmail, verificationCode, currentUserId);
+        //    ResultText.Text = "✅ Verification code sent to email.";
+        //}
 
         private void UpdatePassword_Click(object sender, RoutedEventArgs e)
         {
             string oldPassword = CurrentPasswordBox.Password.Trim();
             string newPassword = NewPasswordBox.Password.Trim();
             string confirmPassword = ConfirmNewPasswordBox.Password.Trim();
-            string code = CodeBox.Text.Trim();
+            //string code = CodeBox.Text.Trim();
 
-            if (string.IsNullOrWhiteSpace(oldPassword) || string.IsNullOrWhiteSpace(newPassword) || string.IsNullOrWhiteSpace(code))
+            if (string.IsNullOrWhiteSpace(oldPassword) || string.IsNullOrWhiteSpace(newPassword))
             {
                 ResultText.Text = "❌ Please fill in all fields.";
                 return;
@@ -67,11 +67,11 @@ namespace KeepTrackAppUI
                 return;
             }
 
-            if (code != verificationCode)
-            {
-                ResultText.Text = "❌ Incorrect verification code.";
-                return;
-            }
+            //if (code != verificationCode)
+            //{
+            //    ResultText.Text = "❌ Incorrect verification code.";
+            //    return;
+            //}
 
             string connectionString = "server=localhost;port=3307;user=root;password=Svana13*;database=keeptrack;";
             using var conn = new MySqlConnection(connectionString);
