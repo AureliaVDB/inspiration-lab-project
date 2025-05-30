@@ -1,0 +1,27 @@
+﻿<Window x:Class="KeepTrackAppUI.DashboardWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Dashboard" Height="500" Width="700" Background="White">
+    <DockPanel>
+        <!-- NAVIGATION BAR -->
+        <Border Background="#9BFF66" DockPanel.Dock="Top" Padding="10">
+            <DockPanel>
+                <TextBlock Text="KEEP TRACK" FontSize="24" FontWeight="Bold"
+                       VerticalAlignment="Center" DockPanel.Dock="Left"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" DockPanel.Dock="Right">
+                    <Button Content="Progress" Margin="5" Padding="10,2" Click="TrackProgress_Click"/>
+                    <Button Content="Profile" Margin="5" Padding="10,2" Click="GoToProfile_Click"/>
+                    <Button Content="Recipes" Margin="5" Padding="10,2" Click="GoToRecipes_Click"/>
+                    <Button Content="Supplements" Margin="5" Padding="10,2" Click="GoToSupplements_Click"/>
+                </StackPanel>
+            </DockPanel>
+        </Border>
+
+        <!-- MAIN CONTENT -->
+        <Grid>
+            <TextBlock Text="Welcome to KeepTrack" FontSize="50" FontWeight="Bold"
+                   HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Grid>
+    </DockPanel>
+
+</Window>

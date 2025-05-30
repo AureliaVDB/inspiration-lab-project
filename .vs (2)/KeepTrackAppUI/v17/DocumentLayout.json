@@ -1,0 +1,504 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\aurel\\OneDrive\\Desktop\\UI\\KeepTrackAppUI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{35B84698-FD1E-4FD9-8B83-9A8345696997}|KeepTrackAppUI.csproj|c:\\users\\aurel\\onedrive\\desktop\\ui\\keeptrackappui\\recipeswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{35B84698-FD1E-4FD9-8B83-9A8345696997}|KeepTrackAppUI.csproj|solutionrelative:recipeswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35B84698-FD1E-4FD9-8B83-9A8345696997}|KeepTrackAppUI.csproj|c:\\users\\aurel\\onedrive\\desktop\\ui\\keeptrackappui\\recipeswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35B84698-FD1E-4FD9-8B83-9A8345696997}|KeepTrackAppUI.csproj|solutionrelative:recipeswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35B84698-FD1E-4FD9-8B83-9A8345696997}|KeepTrackAppUI.csproj|c:\\users\\aurel\\onedrive\\desktop\\ui\\keeptrackappui\\supplementwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{35B84698-FD1E-4FD9-8B83-9A8345696997}|KeepTrackAppUI.csproj|solutionrelative:supplementwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35B84698-FD1E-4FD9-8B83-9A8345696997}|KeepTrackAppUI.csproj|c:\\users\\aurel\\onedrive\\desktop\\ui\\keeptrackappui\\adminsupplementswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35B84698-FD1E-4FD9-8B83-9A8345696997}|KeepTrackAppUI.csproj|solutionrelative:adminsupplementswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35B84698-FD1E-4FD9-8B83-9A8345696997}|KeepTrackAppUI.csproj|c:\\users\\aurel\\onedrive\\desktop\\ui\\keeptrackappui\\adminsupplementswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{35B84698-FD1E-4FD9-8B83-9A8345696997}|KeepTrackAppUI.csproj|solutionrelative:adminsupplementswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35B84698-FD1E-4FD9-8B83-9A8345696997}|KeepTrackAppUI.csproj|c:\\users\\aurel\\onedrive\\desktop\\ui\\keeptrackappui\\supplementwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35B84698-FD1E-4FD9-8B83-9A8345696997}|KeepTrackAppUI.csproj|solutionrelative:supplementwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35B84698-FD1E-4FD9-8B83-9A8345696997}|KeepTrackAppUI.csproj|c:\\users\\aurel\\onedrive\\desktop\\ui\\keeptrackappui\\progresswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35B84698-FD1E-4FD9-8B83-9A8345696997}|KeepTrackAppUI.csproj|solutionrelative:progresswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35B84698-FD1E-4FD9-8B83-9A8345696997}|KeepTrackAppUI.csproj|c:\\users\\aurel\\onedrive\\desktop\\ui\\keeptrackappui\\progresswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{35B84698-FD1E-4FD9-8B83-9A8345696997}|KeepTrackAppUI.csproj|solutionrelative:progresswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35B84698-FD1E-4FD9-8B83-9A8345696997}|KeepTrackAppUI.csproj|c:\\users\\aurel\\onedrive\\desktop\\ui\\keeptrackappui\\registerwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{35B84698-FD1E-4FD9-8B83-9A8345696997}|KeepTrackAppUI.csproj|solutionrelative:registerwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35B84698-FD1E-4FD9-8B83-9A8345696997}|KeepTrackAppUI.csproj|c:\\users\\aurel\\onedrive\\desktop\\ui\\keeptrackappui\\profilewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35B84698-FD1E-4FD9-8B83-9A8345696997}|KeepTrackAppUI.csproj|solutionrelative:profilewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35B84698-FD1E-4FD9-8B83-9A8345696997}|KeepTrackAppUI.csproj|c:\\users\\aurel\\onedrive\\desktop\\ui\\keeptrackappui\\profilewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{35B84698-FD1E-4FD9-8B83-9A8345696997}|KeepTrackAppUI.csproj|solutionrelative:profilewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35B84698-FD1E-4FD9-8B83-9A8345696997}|KeepTrackAppUI.csproj|c:\\users\\aurel\\onedrive\\desktop\\ui\\keeptrackappui\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{35B84698-FD1E-4FD9-8B83-9A8345696997}|KeepTrackAppUI.csproj|solutionrelative:loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35B84698-FD1E-4FD9-8B83-9A8345696997}|KeepTrackAppUI.csproj|c:\\users\\aurel\\onedrive\\desktop\\ui\\keeptrackappui\\dashboardwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35B84698-FD1E-4FD9-8B83-9A8345696997}|KeepTrackAppUI.csproj|solutionrelative:dashboardwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35B84698-FD1E-4FD9-8B83-9A8345696997}|KeepTrackAppUI.csproj|c:\\users\\aurel\\onedrive\\desktop\\ui\\keeptrackappui\\changepasswordwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{35B84698-FD1E-4FD9-8B83-9A8345696997}|KeepTrackAppUI.csproj|solutionrelative:changepasswordwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35B84698-FD1E-4FD9-8B83-9A8345696997}|KeepTrackAppUI.csproj|c:\\users\\aurel\\onedrive\\desktop\\ui\\keeptrackappui\\dashboardwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{35B84698-FD1E-4FD9-8B83-9A8345696997}|KeepTrackAppUI.csproj|solutionrelative:dashboardwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35B84698-FD1E-4FD9-8B83-9A8345696997}|KeepTrackAppUI.csproj|c:\\users\\aurel\\onedrive\\desktop\\ui\\keeptrackappui\\changepasswordwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35B84698-FD1E-4FD9-8B83-9A8345696997}|KeepTrackAppUI.csproj|solutionrelative:changepasswordwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35B84698-FD1E-4FD9-8B83-9A8345696997}|KeepTrackAppUI.csproj|c:\\users\\aurel\\onedrive\\desktop\\ui\\keeptrackappui\\adminuserwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{35B84698-FD1E-4FD9-8B83-9A8345696997}|KeepTrackAppUI.csproj|solutionrelative:adminuserwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35B84698-FD1E-4FD9-8B83-9A8345696997}|KeepTrackAppUI.csproj|c:\\users\\aurel\\onedrive\\desktop\\ui\\keeptrackappui\\adminuserwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35B84698-FD1E-4FD9-8B83-9A8345696997}|KeepTrackAppUI.csproj|solutionrelative:adminuserwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35B84698-FD1E-4FD9-8B83-9A8345696997}|KeepTrackAppUI.csproj|c:\\users\\aurel\\onedrive\\desktop\\ui\\keeptrackappui\\adminprogresswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{35B84698-FD1E-4FD9-8B83-9A8345696997}|KeepTrackAppUI.csproj|solutionrelative:adminprogresswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35B84698-FD1E-4FD9-8B83-9A8345696997}|KeepTrackAppUI.csproj|c:\\users\\aurel\\onedrive\\desktop\\ui\\keeptrackappui\\adminprogresswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35B84698-FD1E-4FD9-8B83-9A8345696997}|KeepTrackAppUI.csproj|solutionrelative:adminprogresswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35B84698-FD1E-4FD9-8B83-9A8345696997}|KeepTrackAppUI.csproj|c:\\users\\aurel\\onedrive\\desktop\\ui\\keeptrackappui\\admindashboardwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35B84698-FD1E-4FD9-8B83-9A8345696997}|KeepTrackAppUI.csproj|solutionrelative:admindashboardwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35B84698-FD1E-4FD9-8B83-9A8345696997}|KeepTrackAppUI.csproj|c:\\users\\aurel\\onedrive\\desktop\\ui\\keeptrackappui\\adminrecipeswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35B84698-FD1E-4FD9-8B83-9A8345696997}|KeepTrackAppUI.csproj|solutionrelative:adminrecipeswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35B84698-FD1E-4FD9-8B83-9A8345696997}|KeepTrackAppUI.csproj|c:\\users\\aurel\\onedrive\\desktop\\ui\\keeptrackappui\\adminrecipeswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{35B84698-FD1E-4FD9-8B83-9A8345696997}|KeepTrackAppUI.csproj|solutionrelative:adminrecipeswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35B84698-FD1E-4FD9-8B83-9A8345696997}|KeepTrackAppUI.csproj|c:\\users\\aurel\\onedrive\\desktop\\ui\\keeptrackappui\\admindashboardwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{35B84698-FD1E-4FD9-8B83-9A8345696997}|KeepTrackAppUI.csproj|solutionrelative:admindashboardwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35B84698-FD1E-4FD9-8B83-9A8345696997}|KeepTrackAppUI.csproj|c:\\users\\aurel\\onedrive\\desktop\\ui\\keeptrackappui\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35B84698-FD1E-4FD9-8B83-9A8345696997}|KeepTrackAppUI.csproj|solutionrelative:loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35B84698-FD1E-4FD9-8B83-9A8345696997}|KeepTrackAppUI.csproj|c:\\users\\aurel\\onedrive\\desktop\\ui\\keeptrackappui\\registerwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35B84698-FD1E-4FD9-8B83-9A8345696997}|KeepTrackAppUI.csproj|solutionrelative:registerwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35B84698-FD1E-4FD9-8B83-9A8345696997}|KeepTrackAppUI.csproj|c:\\users\\aurel\\onedrive\\desktop\\ui\\keeptrackappui\\useremailverification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35B84698-FD1E-4FD9-8B83-9A8345696997}|KeepTrackAppUI.csproj|solutionrelative:useremailverification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35B84698-FD1E-4FD9-8B83-9A8345696997}|KeepTrackAppUI.csproj|c:\\users\\aurel\\onedrive\\desktop\\ui\\keeptrackappui\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35B84698-FD1E-4FD9-8B83-9A8345696997}|KeepTrackAppUI.csproj|solutionrelative:user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35B84698-FD1E-4FD9-8B83-9A8345696997}|KeepTrackAppUI.csproj|c:\\users\\aurel\\onedrive\\desktop\\ui\\keeptrackappui\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{35B84698-FD1E-4FD9-8B83-9A8345696997}|KeepTrackAppUI.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "RegisterWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\aurel\\OneDrive\\Desktop\\UI\\KeepTrackAppUI\\RegisterWindow.xaml",
+              "RelativeDocumentMoniker": "RegisterWindow.xaml",
+              "ToolTip": "C:\\Users\\aurel\\OneDrive\\Desktop\\UI\\KeepTrackAppUI\\RegisterWindow.xaml",
+              "RelativeToolTip": "RegisterWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-30T20:55:18.383Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SupplementWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\aurel\\OneDrive\\Desktop\\UI\\KeepTrackAppUI\\SupplementWindow.xaml",
+              "RelativeDocumentMoniker": "SupplementWindow.xaml",
+              "ToolTip": "C:\\Users\\aurel\\OneDrive\\Desktop\\UI\\KeepTrackAppUI\\SupplementWindow.xaml",
+              "RelativeToolTip": "SupplementWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-30T20:54:54.522Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SupplementWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\aurel\\OneDrive\\Desktop\\UI\\KeepTrackAppUI\\SupplementWindow.xaml.cs",
+              "RelativeDocumentMoniker": "SupplementWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\aurel\\OneDrive\\Desktop\\UI\\KeepTrackAppUI\\SupplementWindow.xaml.cs",
+              "RelativeToolTip": "SupplementWindow.xaml.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAcwFEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-30T20:53:28.316Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RecipesWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\aurel\\OneDrive\\Desktop\\UI\\KeepTrackAppUI\\RecipesWindow.xaml",
+              "RelativeDocumentMoniker": "RecipesWindow.xaml",
+              "ToolTip": "C:\\Users\\aurel\\OneDrive\\Desktop\\UI\\KeepTrackAppUI\\RecipesWindow.xaml",
+              "RelativeToolTip": "RecipesWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-30T20:52:12.275Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RecipesWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\aurel\\OneDrive\\Desktop\\UI\\KeepTrackAppUI\\RecipesWindow.xaml.cs",
+              "RelativeDocumentMoniker": "RecipesWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\aurel\\OneDrive\\Desktop\\UI\\KeepTrackAppUI\\RecipesWindow.xaml.cs",
+              "RelativeToolTip": "RecipesWindow.xaml.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAA3wEMAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-30T20:51:28.229Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ProfileWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\aurel\\OneDrive\\Desktop\\UI\\KeepTrackAppUI\\ProfileWindow.xaml.cs",
+              "RelativeDocumentMoniker": "ProfileWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\aurel\\OneDrive\\Desktop\\UI\\KeepTrackAppUI\\ProfileWindow.xaml.cs",
+              "RelativeToolTip": "ProfileWindow.xaml.cs",
+              "ViewState": "AgIAAGsAAAAAAAAAAAAswIEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-30T20:49:33.496Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ProfileWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\aurel\\OneDrive\\Desktop\\UI\\KeepTrackAppUI\\ProfileWindow.xaml",
+              "RelativeDocumentMoniker": "ProfileWindow.xaml",
+              "ToolTip": "C:\\Users\\aurel\\OneDrive\\Desktop\\UI\\KeepTrackAppUI\\ProfileWindow.xaml",
+              "RelativeToolTip": "ProfileWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-30T20:49:27.535Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "DashboardWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\aurel\\OneDrive\\Desktop\\UI\\KeepTrackAppUI\\DashboardWindow.xaml.cs",
+              "RelativeDocumentMoniker": "DashboardWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\aurel\\OneDrive\\Desktop\\UI\\KeepTrackAppUI\\DashboardWindow.xaml.cs",
+              "RelativeToolTip": "DashboardWindow.xaml.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAowDAAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-30T18:53:34.028Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "DashboardWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\aurel\\OneDrive\\Desktop\\UI\\KeepTrackAppUI\\DashboardWindow.xaml",
+              "RelativeDocumentMoniker": "DashboardWindow.xaml",
+              "ToolTip": "C:\\Users\\aurel\\OneDrive\\Desktop\\UI\\KeepTrackAppUI\\DashboardWindow.xaml",
+              "RelativeToolTip": "DashboardWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-30T18:41:18.261Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "UserEmailVerification.cs",
+              "DocumentMoniker": "C:\\Users\\aurel\\OneDrive\\Desktop\\UI\\KeepTrackAppUI\\UserEmailVerification.cs",
+              "RelativeDocumentMoniker": "UserEmailVerification.cs",
+              "ToolTip": "C:\\Users\\aurel\\OneDrive\\Desktop\\UI\\KeepTrackAppUI\\UserEmailVerification.cs",
+              "RelativeToolTip": "UserEmailVerification.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAAADsAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-30T09:10:53.947Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\aurel\\OneDrive\\Desktop\\UI\\KeepTrackAppUI\\User.cs",
+              "RelativeDocumentMoniker": "User.cs",
+              "ToolTip": "C:\\Users\\aurel\\OneDrive\\Desktop\\UI\\KeepTrackAppUI\\User.cs",
+              "RelativeToolTip": "User.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-30T09:10:47.96Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "RegisterWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\aurel\\OneDrive\\Desktop\\UI\\KeepTrackAppUI\\RegisterWindow.xaml.cs",
+              "RelativeDocumentMoniker": "RegisterWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\aurel\\OneDrive\\Desktop\\UI\\KeepTrackAppUI\\RegisterWindow.xaml.cs",
+              "RelativeToolTip": "RegisterWindow.xaml.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAmwHQAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-30T09:10:32.683Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "LoginWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\aurel\\OneDrive\\Desktop\\UI\\KeepTrackAppUI\\LoginWindow.xaml.cs",
+              "RelativeDocumentMoniker": "LoginWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\aurel\\OneDrive\\Desktop\\UI\\KeepTrackAppUI\\LoginWindow.xaml.cs",
+              "RelativeToolTip": "LoginWindow.xaml.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAzwCoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-30T09:06:12.892Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "LoginWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\aurel\\OneDrive\\Desktop\\UI\\KeepTrackAppUI\\LoginWindow.xaml",
+              "RelativeDocumentMoniker": "LoginWindow.xaml",
+              "ToolTip": "C:\\Users\\aurel\\OneDrive\\Desktop\\UI\\KeepTrackAppUI\\LoginWindow.xaml",
+              "RelativeToolTip": "LoginWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-30T09:06:01.183Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ProgressWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\aurel\\OneDrive\\Desktop\\UI\\KeepTrackAppUI\\ProgressWindow.xaml.cs",
+              "RelativeDocumentMoniker": "ProgressWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\aurel\\OneDrive\\Desktop\\UI\\KeepTrackAppUI\\ProgressWindow.xaml.cs",
+              "RelativeToolTip": "ProgressWindow.xaml.cs",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAIwJIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-30T08:59:49.795Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ProgressWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\aurel\\OneDrive\\Desktop\\UI\\KeepTrackAppUI\\ProgressWindow.xaml",
+              "RelativeDocumentMoniker": "ProgressWindow.xaml",
+              "ToolTip": "C:\\Users\\aurel\\OneDrive\\Desktop\\UI\\KeepTrackAppUI\\ProgressWindow.xaml",
+              "RelativeToolTip": "ProgressWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-30T08:52:10.835Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AdminSupplementsWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\aurel\\OneDrive\\Desktop\\UI\\KeepTrackAppUI\\AdminSupplementsWindow.xaml.cs",
+              "RelativeDocumentMoniker": "AdminSupplementsWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\aurel\\OneDrive\\Desktop\\UI\\KeepTrackAppUI\\AdminSupplementsWindow.xaml.cs",
+              "RelativeToolTip": "AdminSupplementsWindow.xaml.cs",
+              "ViewState": "AgIAAG0AAAAAAAAAAAAcwMsAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-30T08:38:00.547Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AdminSupplementsWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\aurel\\OneDrive\\Desktop\\UI\\KeepTrackAppUI\\AdminSupplementsWindow.xaml",
+              "RelativeDocumentMoniker": "AdminSupplementsWindow.xaml",
+              "ToolTip": "C:\\Users\\aurel\\OneDrive\\Desktop\\UI\\KeepTrackAppUI\\AdminSupplementsWindow.xaml",
+              "RelativeToolTip": "AdminSupplementsWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-30T08:36:58.108Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "AdminRecipesWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\aurel\\OneDrive\\Desktop\\UI\\KeepTrackAppUI\\AdminRecipesWindow.xaml.cs",
+              "RelativeDocumentMoniker": "AdminRecipesWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\aurel\\OneDrive\\Desktop\\UI\\KeepTrackAppUI\\AdminRecipesWindow.xaml.cs",
+              "RelativeToolTip": "AdminRecipesWindow.xaml.cs",
+              "ViewState": "AgIAAHcAAAAAAAAAAAAAwKoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-30T08:34:25.667Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "AdminRecipesWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\aurel\\OneDrive\\Desktop\\UI\\KeepTrackAppUI\\AdminRecipesWindow.xaml",
+              "RelativeDocumentMoniker": "AdminRecipesWindow.xaml",
+              "ToolTip": "C:\\Users\\aurel\\OneDrive\\Desktop\\UI\\KeepTrackAppUI\\AdminRecipesWindow.xaml",
+              "RelativeToolTip": "AdminRecipesWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-30T08:30:28.605Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "AdminProgressWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\aurel\\OneDrive\\Desktop\\UI\\KeepTrackAppUI\\AdminProgressWindow.xaml.cs",
+              "RelativeDocumentMoniker": "AdminProgressWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\aurel\\OneDrive\\Desktop\\UI\\KeepTrackAppUI\\AdminProgressWindow.xaml.cs",
+              "RelativeToolTip": "AdminProgressWindow.xaml.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAqwB4AAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-30T08:28:23.39Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "AdminProgressWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\aurel\\OneDrive\\Desktop\\UI\\KeepTrackAppUI\\AdminProgressWindow.xaml",
+              "RelativeDocumentMoniker": "AdminProgressWindow.xaml",
+              "ToolTip": "C:\\Users\\aurel\\OneDrive\\Desktop\\UI\\KeepTrackAppUI\\AdminProgressWindow.xaml",
+              "RelativeToolTip": "AdminProgressWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-30T08:27:40.087Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "AdminUserWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\aurel\\OneDrive\\Desktop\\UI\\KeepTrackAppUI\\AdminUserWindow.xaml.cs",
+              "RelativeDocumentMoniker": "AdminUserWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\aurel\\OneDrive\\Desktop\\UI\\KeepTrackAppUI\\AdminUserWindow.xaml.cs",
+              "RelativeToolTip": "AdminUserWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAswCsAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-30T08:24:25.624Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "AdminUserWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\aurel\\OneDrive\\Desktop\\UI\\KeepTrackAppUI\\AdminUserWindow.xaml",
+              "RelativeDocumentMoniker": "AdminUserWindow.xaml",
+              "ToolTip": "C:\\Users\\aurel\\OneDrive\\Desktop\\UI\\KeepTrackAppUI\\AdminUserWindow.xaml",
+              "RelativeToolTip": "AdminUserWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-30T08:22:52.518Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "AdminDashboardWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\aurel\\OneDrive\\Desktop\\UI\\KeepTrackAppUI\\AdminDashboardWindow.xaml.cs",
+              "RelativeDocumentMoniker": "AdminDashboardWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\aurel\\OneDrive\\Desktop\\UI\\KeepTrackAppUI\\AdminDashboardWindow.xaml.cs",
+              "RelativeToolTip": "AdminDashboardWindow.xaml.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAkwBwAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-30T08:21:25.978Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "AdminDashboardWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\aurel\\OneDrive\\Desktop\\UI\\KeepTrackAppUI\\AdminDashboardWindow.xaml",
+              "RelativeDocumentMoniker": "AdminDashboardWindow.xaml",
+              "ToolTip": "C:\\Users\\aurel\\OneDrive\\Desktop\\UI\\KeepTrackAppUI\\AdminDashboardWindow.xaml",
+              "RelativeToolTip": "AdminDashboardWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-30T08:15:20.397Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ChangePasswordWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\aurel\\OneDrive\\Desktop\\UI\\KeepTrackAppUI\\ChangePasswordWindow.xaml.cs",
+              "RelativeDocumentMoniker": "ChangePasswordWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\aurel\\OneDrive\\Desktop\\UI\\KeepTrackAppUI\\ChangePasswordWindow.xaml.cs",
+              "RelativeToolTip": "ChangePasswordWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T11:22:20.438Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ChangePasswordWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\aurel\\OneDrive\\Desktop\\UI\\KeepTrackAppUI\\ChangePasswordWindow.xaml",
+              "RelativeDocumentMoniker": "ChangePasswordWindow.xaml",
+              "ToolTip": "C:\\Users\\aurel\\OneDrive\\Desktop\\UI\\KeepTrackAppUI\\ChangePasswordWindow.xaml",
+              "RelativeToolTip": "ChangePasswordWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-29T11:20:32.733Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\aurel\\OneDrive\\Desktop\\UI\\KeepTrackAppUI\\App.xaml",
+              "RelativeDocumentMoniker": "App.xaml",
+              "ToolTip": "C:\\Users\\aurel\\OneDrive\\Desktop\\UI\\KeepTrackAppUI\\App.xaml",
+              "RelativeToolTip": "App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-29T09:55:24.358Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

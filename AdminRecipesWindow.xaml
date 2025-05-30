@@ -1,0 +1,137 @@
+﻿<Window x:Class="KeepTrackAppUI.AdminRecipesWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Admin - Recipes" Height="800" Width="900" Background="White" WindowStartupLocation="CenterScreen">
+    <DockPanel>
+
+        <!-- NAVIGATION BAR -->
+        <Border Background="#9BFF66" DockPanel.Dock="Top" Padding="10">
+            <DockPanel>
+                <TextBlock Text="KEEP TRACK (Admin)" FontSize="24" FontWeight="Bold"
+                       VerticalAlignment="Center" DockPanel.Dock="Left"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" DockPanel.Dock="Right">
+                    <Button Content="Users" Margin="5" Padding="10,2" Click="GoToEditUsers_Click"/>
+                    <Button Content="Recipes" Margin="5" Padding="10,2" Click="GoToAdminRecipes_Click"/>
+                    <Button Content="Supplements" Margin="5" Padding="10,2" Click="GoToAdminSupplements_Click"/>
+                    <Button Content="Progress" Margin="5" Padding="10,2" Click="GoToAdminProgress_Click"/>
+                </StackPanel>
+            </DockPanel>
+        </Border>
+
+        <!-- CONTENT -->
+        <ScrollViewer>
+            <StackPanel Margin="30">
+                <TextBlock Text="All Recipes:" FontSize="18" FontWeight="Bold" Margin="0,0,0,10"/>
+
+                <DataGrid x:Name="RecipeGrid" SelectionChanged="RecipeGrid_SelectionChanged" AutoGenerateColumns="False" Height="300" CanUserAddRows="False">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Title" Binding="{Binding Title}" Width="2*"/>
+                        <DataGridTextColumn Header="Category" Binding="{Binding Category}" Width="*"/>
+                        <DataGridTextColumn Header="Calories" Binding="{Binding Calories}" Width="*"/>
+                        <DataGridTextColumn Header="Protein" Binding="{Binding Protein}" Width="*"/>
+                        <DataGridTextColumn Header="Carbs" Binding="{Binding Carbs}" Width="*"/>
+                        <DataGridTextColumn Header="Fat" Binding="{Binding Fat}" Width="*"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+
+                <!-- ADD RECIPE FORM -->
+                <TextBlock Text="Add New Recipe:" FontSize="18" FontWeight="Bold" Margin="20,30,0,10"/>
+
+                <Grid Margin="0,0,0,10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="150"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Text="Title:" Grid.Row="0" Grid.Column="0"/>
+                    <TextBox x:Name="AddTitleBox" Grid.Row="0" Grid.Column="1" Margin="5"/>
+
+                    <TextBlock Text="Category:" Grid.Row="1" Grid.Column="0"/>
+                    <TextBox x:Name="AddCategoryBox" Grid.Row="1" Grid.Column="1" Margin="5"/>
+
+                    <TextBlock Text="Ingredients:" Grid.Row="2" Grid.Column="0"/>
+                    <TextBox x:Name="AddIngredientsBox" Grid.Row="2" Grid.Column="1" Margin="5"/>
+
+                    <TextBlock Text="Instructions:" Grid.Row="3" Grid.Column="0"/>
+                    <TextBox x:Name="AddInstructionsBox" Grid.Row="3" Grid.Column="1" Margin="5"/>
+
+                    <TextBlock Text="Image URL:" Grid.Row="4" Grid.Column="0"/>
+                    <TextBox x:Name="AddImageBox" Grid.Row="4" Grid.Column="1" Margin="5"/>
+
+                    <StackPanel Grid.Row="5" Grid.Column="1" Orientation="Horizontal" Margin="5">
+                        <StackPanel Margin="0,0,20,0">
+                            <TextBlock Text="Calories:"/>
+                            <TextBox x:Name="AddCaloriesBox" Width="100"/>
+                        </StackPanel>
+                        <StackPanel Margin="0,0,20,0">
+                            <TextBlock Text="Protein:"/>
+                            <TextBox x:Name="AddProteinBox" Width="100"/>
+                        </StackPanel>
+                        <StackPanel Margin="0,0,20,0">
+                            <TextBlock Text="Carbs:"/>
+                            <TextBox x:Name="AddCarbsBox" Width="100"/>
+                        </StackPanel>
+                        <StackPanel>
+                            <TextBlock Text="Fat:"/>
+                            <TextBox x:Name="AddFatBox" Width="100"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+
+                <Button Content="Add Recipe" Width="150" Height="35" Click="AddRecipe_Click"/>
+
+
+                <TextBlock Text="Edit Selected Recipe:" FontSize="18" FontWeight="Bold" Margin="20,20,0,10"/>
+
+                <Grid Margin="0,0,0,10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="150"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Text="Title:" Grid.Row="0" Grid.Column="0"/>
+                    <TextBox x:Name="TitleBox" Grid.Row="0" Grid.Column="1" Margin="5"/>
+
+                    <TextBlock Text="Category:" Grid.Row="1" Grid.Column="0"/>
+                    <TextBox x:Name="CategoryBox" Grid.Row="1" Grid.Column="1" Margin="5"/>
+
+                    <TextBlock Text="Ingredients:" Grid.Row="2" Grid.Column="0"/>
+                    <TextBox x:Name="IngredientsBox" Grid.Row="2" Grid.Column="1" Margin="5"/>
+
+                    <TextBlock Text="Instructions:" Grid.Row="3" Grid.Column="0"/>
+                    <TextBox x:Name="InstructionsBox" Grid.Row="3" Grid.Column="1" Margin="5"/>
+
+                    <TextBlock Text="Calories / Protein / Carbs / Fat:" Grid.Row="4" Grid.Column="0"/>
+                    <StackPanel Orientation="Horizontal" Grid.Row="4" Grid.Column="1" Margin="5">
+                        <TextBox x:Name="CaloriesBox" Width="60" Margin="0,0,5,0"/>
+                        <TextBox x:Name="ProteinBox" Width="60" Margin="0,0,5,0"/>
+                        <TextBox x:Name="CarbsBox" Width="60" Margin="0,0,5,0"/>
+                        <TextBox x:Name="FatBox" Width="60"/>
+                    </StackPanel>
+                </Grid>
+
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
+                    <Button Content="Update Recipe" Width="120" Margin="5" Click="UpdateRecipe_Click"/>
+                    <Button Content="Delete Recipe" Width="120" Margin="5" Background="Red" Foreground="White" Click="DeleteRecipe_Click"/>
+                </StackPanel>
+
+            </StackPanel>
+        </ScrollViewer>
+    </DockPanel>
+</Window>
